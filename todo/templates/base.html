@@ -19,5 +19,19 @@
     <![endif]-->
     {% block content %}{% endblock content %}
     <script src="" async defer></script>
+    <script>
+      const handleSeePass = () => {
+        const pwdInput = document.querySelector('.pwdInput')
+        const pwdBtnText = document.querySelector('.pwdBtn > div')
+    
+        if (pwdInput.type === 'password') {
+          pwdInput.type = 'text'
+          pwdBtnText.innerText = 'Hidden Password'
+        } else {
+          pwdInput.type = 'password'
+          pwdBtnText.innerText = 'Show Password'
+        }
+      }
+    </script>
   </body>
 </html>
